@@ -25,15 +25,11 @@ Representación de los raster en RS:
 
  ![alt text](https://github.com/demostenesmx/Raster_NDVI-SAVI-GEE_RStudio_MK/blob/main/Anua_NDVI_ZN.png)
 
-2. ![alt text](https://github.com/demostenesmx/VCA_RBSK_DCA/blob/main/temmaxM_ZN-ZS.png)
+2. Plot SAVI_ZN.
+ 
+ ![alt text](https://github.com/demostenesmx/Raster_NDVI-SAVI-GEE_RStudio_MK/blob/main/SAVI_ZN_RS.png)
 
 3.![alt text](https://github.com/demostenesmx/VCA_RBSK_DCA/blob/main/temminM_ZN-ZS.png)
-
-De igual forma, se presenta la estimación de la pendiente con puntos al zar dentro de la ZN y ZS con el catalogo de Modelo Diggital de Elavación a 30m de resolución de la NASA SRTM.
-
-1. ![alt text](https://github.com/demostenesmx/VCA_RBSK_DCA/blob/main/Pend-ZN.png)
-
-2. ![alt text](https://github.com/demostenesmx/VCA_RBSK_DCA/blob/main/Pend-ZS.png)
 
 
 ### Capas raster VCA. 
