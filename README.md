@@ -4,7 +4,7 @@ Análisis de serie temporal de raster NDVI y SAVI de GEE en Rstudio
 ## Descripción 📋
 El presente código se encuentra estructurado para calcular la prueba Mann-Kendal (MK), Función que permite calcular para cada pixel la tendencia (+/-) de cada valor de IVM, evaluando su secuencia, es decir si es ascendente o descendente. Esta prueba fue estimada sobre raster anuales provenientes de Google earth Engine (GEE), sobre el ecosisteam de duna costera (DC) para la Reserva de la Bisofera de Sian Ka´an (RBSK), Quintana Roo, México, para el periodo 2011-2020. 
 
-[**GEE**](https://developers.google.com/earth-engine/guides/getstarted?hl=en).
+Las capas raster anuales fueron descargadas a traves de la plataforma [**GEE**](https://developers.google.com/earth-engine/guides/getstarted?hl=en).
 
 El repostirorio se elaboró de acuerdo a los lineamientos de la [**licencia GNU General Public License v3.0.**](https://choosealicense.com/licenses/gpl-3.0/).
 
@@ -12,7 +12,11 @@ El repostirorio se elaboró de acuerdo a los lineamientos de la [**licencia GNU 
 
 ![alt text](https://github.com/demostenesmx/NDVI-SAVI_DCA/blob/main/C02_B_3_2_1_RBSK.JPG) 📖
 
-Estimaciones.
+Interfaz de RStudio .
+
+![alt text](https://github.com/demostenesmx/Raster_NDVI-SAVI-GEE_RStudio_MK/blob/main/Interfaz_RStudio.JPG)
+
+
 
 Con la ejecución de este código se obtendrán series de tiempo con valores mensuales por año durante un periodo de 10 años, de las variables climaticas estimadas  para la zona norte y sur de la RBSK, con el empleo del catalogo de Terraclimate.
 
