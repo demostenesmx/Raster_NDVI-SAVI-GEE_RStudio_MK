@@ -21,7 +21,9 @@ Con la ejecución de este código se obtendrán las tendencias de la densidad de
 
 Representación de los raster en RS:
 
-1. ![alt text](https://github.com/demostenesmx/VCA_RBSK_DCA/blob/main/PrepM_ZN-ZS.png)
+1. Plot NDVI_ZN.
+
+ ![alt text](https://github.com/demostenesmx/Raster_NDVI-SAVI-GEE_RStudio_MK/blob/main/Anua_NDVI_ZN.png)
 
 2. ![alt text](https://github.com/demostenesmx/VCA_RBSK_DCA/blob/main/temmaxM_ZN-ZS.png)
 
