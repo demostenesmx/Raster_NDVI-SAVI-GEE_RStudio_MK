@@ -2,7 +2,7 @@
 Análisis de serie temporal de raster NDVI y SAVI de GEE en RStudio (RS).
 
 ## Descripción 📋
-El presente código se encuentra estructurado para calcular la prueba Mann-Kendal (MK), Función que permite calcular para cada pixel la tendencia (+/-) de cada valor de IVM, evaluando su secuencia, es decir si es ascendente o descendente. Esta prueba fue estimada sobre raster anuales provenientes de Google earth Engine (GEE), sobre el ecosisteam de duna costera (DC) para la Reserva de la Bisofera de Sian Ka´an (RBSK), Quintana Roo, México, para el periodo 2011-2020. 
+El presente código se encuentra estructurado para calcular la prueba Mann-Kendal (MK), Función que permite calcular para cada pixel la tendencia (+/-) de cada valor de IVM, evaluando su secuencia, es decir si es ascendente o descendente. Esta prueba fue estimada sobre raster anuales provenientes de Google Earth Engine (GEE), sobre el ecosisteam de duna costera (DC), en la Reserva de la Bisofera de Sian Ka´an (RBSK), Quintana Roo, México, para el periodo 2011-2020. 
 
 Las capas raster anuales fueron descargadas a traves de la plataforma [**GEE**](https://developers.google.com/earth-engine/guides/getstarted?hl=en).
 
