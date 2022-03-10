@@ -1,6 +1,6 @@
-##1.=============================Instalación de paquetes y llamado de librerías.==================================================/
+##=============================Instalación de paquetes y llamado de librerías.==================================================/
 
-## Actualizar paqueterías antes de inciar a correr el código.
+##=============================Actualizar paqueterías antes de inciar a correr el código.======================================/
 
 library(raster)
 library(rgdal)
@@ -27,17 +27,17 @@ install.packages("rgdal")
 ##===========================(tomado y adaptado de Dr. Francisco Javier Bonet García ).===================================================/
 ## Esta obra se ecuentra bajo los términos de la licencia GNU General Public License v3.0.======================================================/
 
-##==============================1. Estableciendo el directorio de trabajo donde estan los raster anuales de trabajo.========================/
+##============================== 1. Estableciendo el directorio de trabajo donde estan los raster anuales de trabajo.========================/
 
 setwd("~/R_Studio/NDVI-SAVI-ZN-ZS/ZN/NDVI")
 
-##==============================2. Llamado y enpaquetado todas las imagenes tiff generadas en GEE en una única imagen multibanda.===============/
+##============================== 2. Llamado y enpaquetado todas las imagenes tiff generadas en GEE en una única imagen multibanda.===============/
 
 img_ndvi <- list.files(pattern ='*.tif', full.names=TRUE)
 
 ndvis_01 <- stack(img_ndvi)
 
-##===============================3. Gráficas de los resultados.=====================================================================================/
+##=============================== 3. Gráficas de los resultados.=====================================================================================/
 
 plot(ndvis_01)
 
@@ -52,7 +52,7 @@ fun_k <-  function(x){return(unlist(MannKendall(x)))} ## Llamando función MK
 
 kendal_result <- calc(ndvis_01, fun_k) ##Aplicando la función al raster ndvi_2011_2020 generado.
 
-##===================================6. exportamos la tendencia (tau) a un tiff
+##=================================== 6. exportamos la tendencia (tau) a un tiff. ====================================================================/
 
 writeRaster(kendal_result$tau, filename = 'tau.tif', format= 'GTiff', overwrite = TRUE)
 
