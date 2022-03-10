@@ -81,13 +81,12 @@ tau_ZN_NDVI_f <- mask (tau_ZN_NDVI, ZN)
 writeRaster(tau_ZN_NDVI_f, filename = 'tau_ZN_NDVI.tif', format= 'GTiff', overwrite = TRUE)
 
 ## Nota: De los resultados obtenidos y explorados hasta esta sección del código, se logro observar que si se reclasifica, ##
-##el tif se exporta con una zona externa que la reclasificación la reconoce con valor, más sin embargo, no debería ser así.##
-##Pero si se exporta sin reclasificación en R studio la zona externa desaparece. Entonces se puede realizar la reclasificación de valores ##
-##de forma manual en  QGis con valors como señala el código de -1 a 1, para verificar las zonas con gtendencia positiva y negativa. ##
+##el tif se exporta con una zona externa que la reclasificación la reconoce con valor dentro de QGis. Sin embargo, no debería ser así.##
+##NBos obstante, si se exporta sin reclasificar en R studio, la zona externa desaparece. Entonces se puede realizar la reclasificación de valores ##
+##de tendencia (+1/-1) de forma manual en  QGis, para verificar las zonas con tendencia positiva y negativa. ##
 
 ## esta sección podría funcionar cuadno se tiene una zona establecida de dimensiones mayores a este estudio y despues realizar el corte 
 ## y reclasificación posterior para obtener un raster con valores optimos.
-##Reclasificación de la ZN-NDVI periodo 2011-2020.
 
 m_ZN <- c(-1, -0.25, -1, -0.25, 0.5, 0, 0.5, 1, 1)
 rclmat_ZN <- matrix(m_ZN, ncol = 3, byrow = TRUE)
