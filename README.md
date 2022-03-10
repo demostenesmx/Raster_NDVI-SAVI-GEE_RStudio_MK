@@ -35,7 +35,7 @@ Representación de los raster en RS:
 
 4. Plot SAVI_ZS.
 
-   ![alt text](https://github.com/demostenesmx/VCA_RBSK_DCA/blob/main/Tasks_VCA.JPG)
+   ![alt text](https://github.com/demostenesmx/Raster_NDVI-SAVI-GEE_RStudio_MK/blob/main/SAVI_ZS.png)
 
 ### Interfaz de QGis. 
 
