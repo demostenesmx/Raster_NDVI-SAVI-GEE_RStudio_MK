@@ -1,4 +1,6 @@
-##1.=============================Instalación de paquetes y llamado de librerías en RStudio.==================================================/
+##1.=============================Instalación de paquetes y llamado de librerías.==================================================/
+
+## Actualizar paqueterías antes de inciar a correr el código.
 
 library(raster)
 library(rgdal)
@@ -23,11 +25,11 @@ install.packages("rgdal")
 ##===================== NDVI y SAVI en vegetación de duna costera en la RBSK, para el periodo 2011-2020. ===================================/
 
 ##===========================(tomado y adaptado de Dr. Francisco Javier Bonet García ).===================================================/
-
+## Esta obra se ecuentra bajo los términos de la licencia GNU General Public License v3.0.======================================================/
 
 ##==============================1. Estableciendo el directorio de trabajo donde estan los raster anuales de trabajo.========================/
 
-setwd("~/R_Studio/NDVI-Anual")
+setwd("~/R_Studio/NDVI-SAVI-ZN-ZS/ZN/NDVI")
 
 ##==============================2. Llamado y enpaquetado todas las imagenes tiff generadas en GEE en una única imagen multibanda.===============/
 
@@ -46,9 +48,9 @@ writeRaster(ndvis_01, filename = 'ndvi_2011_2020.tif', format= 'GTiff', overwrit
 ##================================== 5. Calculo de la serie temporal con la prueba MK de todos los pixeles sobre la imagen ==========================/
 ##==================================    multibanda con el ídice estimado (NDVI y/o SAVI).============================================================/
 
-fun_k <-  function(x){return(unlist(MannKendall(x)))}
+fun_k <-  function(x){return(unlist(MannKendall(x)))} ## Llamando función MK
 
-kendal_result <- calc(ndvis_01, fun_k)
+kendal_result <- calc(ndvis_01, fun_k) ##Aplicando la función al raster ndvi_2011_2020 generado.
 
 ##===================================6. exportamos la tendencia (tau) a un tiff
 
@@ -57,28 +59,30 @@ writeRaster(kendal_result$tau, filename = 'tau.tif', format= 'GTiff', overwrite 
 ##====================================== 7. Reclasificación de valores para una mejor visión de las zonas de tendencia  positivas (+) ================/
 ##======================================    y negativas (-),generando matriz de valor máximo y minimo. ==============================================/
 
-m <- c(-1, -0.25, -1, -0.25, 0.5, 0, 0.5, 1, 1)
-
-rclmat <- matrix(m, ncol = 3, byrow = TRUE)
-rc_tau <- reclassify(kendal_result$tau, rclmat)
+m <- c(-1, -0.25, -1, -0.25, 0.5, 0, 0.5, 1, 1) ## Los valores entre -1 y -0.25, tendrán valor de -1. Tendencia negativa.
+                                                ## Los valores entre -0.25 y 0.5 tendrán un valor de 0. Tendencia neutra
+                                                ## Los valores entre 0.5 y 1, tendrán valor de 1. Tendencia positiva
+rclmat <- matrix(m, ncol = 3, byrow = TRUE) ## Se genera la matriz de 3 columnas
+rc_tau <- reclassify(kendal_result$tau, rclmat) ## Aplicando matriz generada a la banda Kendal_result$tau
 
 plot(rc_tau)
 
 ##===================================== 8. Exportando valores reclasificados de tau de MK.===========================================================/
-writeRaster(rc_tau, filename = 'rc_tau.tif', format= 'GTiff', overwrite = TRUE)
+
+writeRaster(rc_tau, filename = 'rc_tau.tif', format= 'GTiff', overwrite = TRUE) ## Se genera archivo raster reclasificado
 
 plot(rc_tau)
 
 ##===================================== 9. Carga de capa vectorial de la zona de estudio según sea el caso.==========================================/
 ##=====================================   para realizar el corte sobre la tendencia estimada. ('.' llamando al working directory) ==================/
 
-ZN <- readOGR ('.', 'ZN_GEE')
-tau_ZN_NDVI <- crop (kendal_result$tau, ZN)
-tau_ZN_NDVI_f <- mask (tau_ZN_NDVI, ZN)
+ZN <- readOGR ('.', 'ZN_GEE') ## Lectura de capa vectorial zona de estudio (ZN).
+tau_ZN_NDVI <- crop (kendal_result$tau, ZN)  ## Corte de la capa Kendal_result$tau con la capa ZN
+tau_ZN_NDVI_f <- mask (tau_ZN_NDVI, ZN) ## fusionar ambas capas.
 
 ##===================================== 10. Exporta la tendencia a formato tiff de la zona de estudio.=============================================/
 
-writeRaster(tau_ZN_NDVI_f, filename = 'tau_ZN_NDVI.tif', format= 'GTiff', overwrite = TRUE)
+writeRaster(tau_ZN_NDVI_f, filename = 'tau_ZN_NDVI.tif', format= 'GTiff', overwrite = TRUE) ## Genera raster de la ZN con valores de NDVI segun capa tau de tendencia.
 
 ## Nota: De los resultados obtenidos y explorados hasta esta sección del código, se logro observar que si se reclasifica, ##
 ##el tif se exporta con una zona externa que la reclasificación la reconoce con valor dentro de QGis. Sin embargo, no debería ser así.##
@@ -87,6 +91,8 @@ writeRaster(tau_ZN_NDVI_f, filename = 'tau_ZN_NDVI.tif', format= 'GTiff', overwr
 
 ## esta sección podría funcionar cuadno se tiene una zona establecida de dimensiones mayores a este estudio y despues realizar el corte 
 ## y reclasificación posterior para obtener un raster con valores optimos.
+
+##Reclasificación de la ZN-NDVI periodo 2011-2020.
 
 m_ZN <- c(-1, -0.25, -1, -0.25, 0.5, 0, 0.5, 1, 1)
 rclmat_ZN <- matrix(m_ZN, ncol = 3, byrow = TRUE)
