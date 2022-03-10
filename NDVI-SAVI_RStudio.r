@@ -1,4 +1,4 @@
-##1.=============================Instalación de paquetes y llamado de librerías.==================================================/
+##1.=============================Instalación de paquetes y llamado de librerías en RStudio.==================================================/
 
 library(raster)
 library(rgdal)
