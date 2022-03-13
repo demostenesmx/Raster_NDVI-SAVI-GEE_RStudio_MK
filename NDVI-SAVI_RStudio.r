@@ -52,6 +52,12 @@ fun_k <-  function(x){return(unlist(MannKendall(x)))} ## Llamando función MK
 
 kendal_result <- calc(ndvis_01, fun_k) ##Aplicando la función al raster ndvi_2011_2020 generado.
 
+print(kendal_result)
+
+summary(kendal_result)
+
+plot(kendal_result)
+
 ##=================================== 6. exportamos la tendencia (tau) a un tiff. ====================================================================/
 
 writeRaster(kendal_result$tau, filename = 'tau.tif', format= 'GTiff', overwrite = TRUE)
