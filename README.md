@@ -37,6 +37,10 @@ Representación de los raster en RS:
 
    ![alt text](https://github.com/demostenesmx/Raster_NDVI-SAVI-GEE_RStudio_MK/blob/main/SAVI_ZS.png)
 
+5. Ejemplo resultado de raster´s conseguidos con Mann-Kendall.
+   
+   ![alt text]( https://github.com/demostenesmx/Raster_NDVI-SAVI-GEE_RStudio_MK/blob/main/5%20raters%20estadisticos.png)
+   
 ### Interfaz de QGis. 
 
 La manipulación de la información contenida en los rasaters puede realizarse, a traves, del sistema de información geografica de su preferencia. Para el presente caso de estudio se utilizó el software de acceso libre QGIS.
