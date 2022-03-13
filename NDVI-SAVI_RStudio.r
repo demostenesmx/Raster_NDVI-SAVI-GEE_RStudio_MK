@@ -87,6 +87,13 @@ ZN <- readOGR ('.', 'ZN_GEE') ## Lectura de capa vectorial zona de estudio (ZN).
 tau_ZN_NDVI <- crop (kendal_result$tau, ZN)  ## Corte de la capa Kendal_result$tau con la capa ZN
 tau_ZN_NDVI_f <- mask (tau_ZN_NDVI, ZN) ## fusionar ambas capas.
 
+print(tau_ZN_NDVI_f)
+
+summary(tau_ZN_NDVI_f)
+
+plot(tau_ZN_NDVI_f) ## recortado ls valores con la capa vectorial de la zona de estudio, se explora lo obtenido con print y summary. 
+                    ## Con Plot se visualiza en la consola el raster de Tau de Mann-Kendall.
+
 ##===================================== 10. Exporta la tendencia a formato tiff de la zona de estudio.=============================================/
 
 writeRaster(tau_ZN_NDVI_f, filename = 'tau_ZN_NDVI.tif', format= 'GTiff', overwrite = TRUE) ## Genera raster de la ZN con valores de NDVI segun capa tau de tendencia.
