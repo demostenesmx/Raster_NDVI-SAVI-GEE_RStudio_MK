@@ -91,7 +91,7 @@ print(tau_ZN_NDVI_f)
 
 summary(tau_ZN_NDVI_f)
 
-plot(tau_ZN_NDVI_f) ## recortado ls valores con la capa vectorial de la zona de estudio, se explora lo obtenido con print y summary. 
+plot(tau_ZN_NDVI_f) ## recortado los valores con la capa vectorial de la zona de estudio, se explora lo obtenido con print y summary. 
                     ## Con Plot se visualiza en la consola el raster de Tau de Mann-Kendall.
 
 ##===================================== 10. Exporta la tendencia a formato tiff de la zona de estudio.=============================================/
