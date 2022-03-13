@@ -56,7 +56,8 @@ print(kendal_result)
 
 summary(kendal_result)
 
-plot(kendal_result)
+plot(kendal_result)  ##En RStudio se obtienen como resultado cinco rasters  a saber: 
+                      ##tau -. Estadistico Tau de Kendall, sl: Valor P,  S: Puntiación de Kendall,  D: denominador; Tau = S/D, y  varS: Varianza de S.
 
 ##=================================== 6. exportamos la tendencia (tau) a un tiff. ====================================================================/
 
@@ -107,3 +108,11 @@ rc_tau_ZN_NDVI <- reclassify(kendal_result$tau, rclmat_ZN)
 plot(rc_tau_ZN_NDVI)
 
 writeRaster(rc_tau_ZN_NDVI, filename = 'rc_tau_ZN_NDVI.tif', format= 'GTiff', overwrite = TRUE)
+
+##bibliografía:
+## RStudio Team (2021). RStudio: Integrated Development for R. RStudio, PBC, Boston, MA URL http://www.rstudio.com/.
+## McLeod, A.I. (2015). Kendall rank correlation and Mann-Kendall trend test. In Package ‘Kendall’ Ver. 2.2.  http://www.stats.uwo.ca/faculty/aim
+
+
+
+
