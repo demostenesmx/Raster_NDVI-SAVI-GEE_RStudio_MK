@@ -100,8 +100,8 @@ writeRaster(tau_ZN_NDVI_f, filename = 'tau_ZN_NDVI.tif', format= 'GTiff', overwr
 
 ## Nota: De los resultados obtenidos y explorados hasta esta sección del código, se logro observar que si se reclasifica, ##
 ##el tif se exporta con una zona externa que la reclasificación la reconoce con valor dentro de QGis. Sin embargo, no debería ser así.##
-##NBos obstante, si se exporta sin reclasificar en R studio, la zona externa desaparece. Entonces se puede realizar la reclasificación de valores ##
-##de tendencia (+1/-1) de forma manual en  QGis, para verificar las zonas con tendencia positiva y negativa. ##
+##No obstante, si se exporta sin reclasificar en R studio, la zona externa desaparece. Entonces se puede realizar la reclasificación de valores ##
+##de tendencia (+1/-1) de forma manual en  QGis, para verificar las zonas con tendencia positiva, neutra y negativa. ##
 
 ## esta sección podría funcionar cuadno se tiene una zona establecida de dimensiones mayores a este estudio y despues realizar el corte 
 ## y reclasificación posterior para obtener un raster con valores optimos.
