@@ -57,7 +57,7 @@ print(kendal_result)
 summary(kendal_result)
 
 plot(kendal_result)  ##En RStudio se obtienen como resultado cinco rasters  a saber: 
-                      ##tau -. Estadistico Tau de Kendall, sl: Valor P,  S: Puntiación de Kendall,  D: denominador; Tau = S/D, y  varS: Varianza de S.
+                      ##tau -. Estadistico Tau de Kendall, sl: Valor P,  S: Puntuación de Kendall,  D: denominador; Tau = S/D, y  varS: Varianza de S.
 
 ##=================================== 6. exportamos la tendencia (tau) a un tiff. ====================================================================/
 
