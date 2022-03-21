@@ -21,8 +21,8 @@ install.packages('raster')
 install.packages("rgdal")
 
 ##===================== Compilación y modificación de código por MMZC. Eloy Gayosso Soto para la estimación ==================================/
-##===================== de la prueba no paramétrica de tendencia Man-Kendal (MK) sobre valores estimados de =================================/
-##===================== NDVI y SAVI en vegetación de duna costera en la RBSK, para el periodo 2011-2020. ===================================/
+##===================== de la prueba no paramétrica de tendencia Man-Kendal (MK) sobre raster´s convalores estimados de =================================/
+##===================== NDVI y SAVI generados en GEE en vegetación de duna costera en la RBSK, para el periodo 2011-2020. ===================================/
 
 ##===========================(tomado y adaptado de Dr. Francisco Javier Bonet García ).===================================================/
 ## Esta obra se ecuentra bajo los términos de la licencia GNU General Public License v3.0.======================================================/
