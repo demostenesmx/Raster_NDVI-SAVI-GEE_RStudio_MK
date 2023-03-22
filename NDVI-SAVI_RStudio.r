@@ -19,9 +19,6 @@ install.packages("rgdal")
 ##===================== de la prueba no paramétrica de tendencia Man-Kendal (MK) sobre valores estimados de =================================/
 ##===================== NDVI y SAVI en vegetación de duna costera en la RBSK, para el periodo 2011-2020. ===================================/
 
-##===========================(tomado y adaptado de Dr. Francisco Javier Bonet García ).===================================================/
-
-
 ##============================== 1. Estableciendo el directorio de trabajo donde estan los raster anuales de trabajo.========================/
 
 setwd("~/R_Studio/NDVI-SAVI-ZN-ZS/ZN/NDVI")
