@@ -130,5 +130,11 @@ writeRaster(rc_tau_ZN_NDVI, filename = 'rc_tau_ZN_NDVI.tif', format= 'GTiff', ov
 ## McLeod, A.I. (2015). Kendall rank correlation and Mann-Kendall trend test. In Package ‘Kendall’ Ver. 2.2.  http://www.stats.uwo.ca/faculty/aim
 
 
+Citas:  Gayosso-Soto, E., Cohuo, S., Sánchez-Sánchez, J. A., Villegas-Sánchez, C. A., Castro-Pérez, J. M., Cutz-Pool, L. Q., & Macario-González, L. (2024). 
+Coastal Dune Vegetation Dynamism and Anthropogenic-Induced Transitions in the Mexican Caribbean during the Last Decade. Plants, 13(13), 1734. 
+https://doi.org/10.3390/plants13131734
 
+Gayosso-Soto, E., Cohuo, S., Sánchez-Sánchez, J. A., Macario-González, L., Villegas-Sánchez, C. A., Medina-Quej, A., Tello-Chan, J. M., Cutz-Pool, L. Q., & Castro-Pérez, J. M. (2024).
+The Environmental Legal Framework of Mexican Caribbean Dunes: A Retrospective Case Study of Vegetation and Coastal Dune Loss in the Sian Ka’an Biosphere Reserve.
+Land, 13(9), 1533. https://doi.org/10.3390/land13091533
 
